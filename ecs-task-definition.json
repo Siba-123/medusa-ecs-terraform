@@ -1,0 +1,24 @@
+[
+  {
+    "name": "medusa",
+    "image": "medusajs/medusa:v1.8.5",
+    "cpu": 512,
+    "memory": 1024,
+    "portMappings": [
+      {
+        "containerPort": 9000,
+        "hostPort": 9000
+      }
+    ],
+    "environment": [
+      {
+        "name": "DATABASE_URL",
+        "value": "postgres://postgres:password@rds-endpoint/medusa"
+      },
+      {
+        "name": "REDIS_URL",
+        "value": "redis://redis-endpoint:6379"
+      }
+    ]
+  }
+]
